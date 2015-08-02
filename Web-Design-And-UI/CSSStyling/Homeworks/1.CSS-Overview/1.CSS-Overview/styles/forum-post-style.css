@@ -1,0 +1,44 @@
+body{
+    background-color: #A9A9A9;
+    font-size: 19px;
+}
+h1{
+    color: #FAFAD2;
+
+}
+body > header > h1{
+    font-size: 3em;
+    text-align: center;
+}
+ article h1{
+    font-size: 2em;
+}
+li{
+    list-style: none;
+    text-align: center;
+
+}
+nav a{
+    color: #FFF;
+    text-decoration: none;
+}
+li:last-child{
+    text-decoration: underline;
+}
+.current{
+    background-color: #D3D3D3;
+}
+footer p{
+    font-size: 0.8em;
+}
+footer a{
+    text-decoration: none;
+    color: #000;
+}
+body > footer{
+    text-align: center;
+}
+article p{
+    overflow: hidden;
+    height: 26px
+}

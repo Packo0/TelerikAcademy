@@ -1,0 +1,45 @@
+html, body, div,table,tbody,thead,th,tr,td, input{
+	margin: 0;
+	padding: 0;
+}
+#wrapper{
+	width: 456px;
+	height: 133px;
+	font-size: 10px;
+}
+table{
+	border-collapse: collapse;
+	border-bottom: 1px solid #CBC9B0;
+}
+th{
+	text-align: left;
+	font-weight: normal;
+	background-color: #52B506;
+	color: #FFF;
+	border-bottom: 1px solid #CBC9B0;
+}
+tr:nth-child(2n){
+	background-color: #ECECD8;
+}
+th,td{
+	border-right: 1px solid #CBC9B0;
+	padding: 2px 30px 2px 8px;
+}
+td:last-child{
+	border-right: none;
+}
+#germany:before{
+	content: url('../images/germany.png');
+	position:relative; /*or absolute*/
+  	left:-4px;
+}
+.mexico:before{
+	content: url('../images/mexico.png');
+	position:relative; /*or absolute*/
+  	left:-4px;
+}
+#uk:before{
+	content: url('../images/uk.png');
+	position:relative; /*or absolute*/
+  	left:-4px;
+}
