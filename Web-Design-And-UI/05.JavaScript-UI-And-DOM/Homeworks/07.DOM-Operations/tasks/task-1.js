@@ -17,8 +17,41 @@ Create a function that takes an id or DOM element and an array of contents
     * In that case, the content of the element **must not be** changed   
 */
 
-module.exports = function () {
+module.exports = function() {
 
-  return function (element, contents) {
-  };
+    return function(element, contents) {
+        var selected,
+            i,
+            len,
+            fragment,
+            cloned;
+
+        if (typeof element === 'string') {
+            selected = document.getElementById(element);
+        } else if (element instanceof HTMLElement) {
+            selected = element;
+        } else {
+            throw Error('The provided first parameter is neither string or existing DOM element');
+        }
+
+        if (!contents || contents.some(function (argument) {
+             return typeof argument !== 'string' && typeof argument !== 'number';
+          })) {
+            throw Error("Any of the contents is neight `string` or `number`");
+        }
+
+        while (selected.lastChild) {
+            selected.removeChild(selected.lastChild);
+        }
+
+        fragment = document.createDocumentFragment();
+
+        for (i = 0, len = contents.length; i < len; i += 1) {
+            cloned = selected.cloneNode(true);
+            cloned.innerHTML = contents[i];
+            fragment.appendChild(cloned);
+        }
+
+        selected.appendChild(fragment);
+    };
 };
