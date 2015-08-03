@@ -25,7 +25,7 @@ describe('Task #1 Tests', function () {
   });
 
   describe('Valid Tests', function () {
-    it('expect nothing to change, when no elements with class `button` or `content`', function () {
+    it('expect nothing to change, whenm no elements with class `button` or `content`', function () {
       var html = '<div id="root"><div></div><ul><li><a href="#">link</a></li></ul></div>';
       document.body.innerHTML = html;
       result('root');
@@ -180,7 +180,6 @@ describe('Task #1 Tests', function () {
       expect(theContent.style.display).to.equal('');
     });
   });
-
 describe('Invalid', function () {
     it('Expect to throw, when no params are provided', function () {
       function test() {
